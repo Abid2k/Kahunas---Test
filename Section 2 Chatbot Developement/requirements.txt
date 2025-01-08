@@ -1,0 +1,7 @@
+langchain==0.0.184
+openai==0.27.8
+PyPDF2==3.0.1
+pandas==1.5.3
+SQLAlchemy==2.0.15
+PyYAML==6.0
+psycopg2-binary==2.9.6 

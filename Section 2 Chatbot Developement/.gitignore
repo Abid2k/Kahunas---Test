@@ -1,0 +1,14 @@
+# Ignore the config folder to avoid exposing API keys or other sensitive information
+config/
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore environment and virtual environment directories
+venv/
+.env/
+
+# Ignore other unnecessary files
+*.log
+*.db

@@ -1,0 +1,23 @@
+fitness_chatbot/
+├── config/
+│   └── config.yaml
+├── data/
+│   ├── csv/
+│   └── pdf/
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── data_processors/
+│   │   ├── __init__.py
+│   │   ├── mysql_processor.py
+│   │   ├── csv_processor.py
+│   │   └── pdf_processor.py
+│   ├── llm/
+│   │   ├── __init__.py
+│   │   └── llm_handler.py
+│   └── utils/
+│       ├── __init__.py
+│       └── helpers.py
+├── requirements.txt
+├── .gitignore
+└── README.md 
