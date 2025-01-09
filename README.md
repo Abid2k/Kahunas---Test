@@ -5,7 +5,7 @@ This repository contains all tasks completed for the project. Each task is organ
 
 Each folder represents an individual task, containing:
 - Relevant code
-- Test results (if applicable)
+- Test results 
 - Supporting documentation or files
 
 
