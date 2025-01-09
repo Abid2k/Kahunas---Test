@@ -1,0 +1,52 @@
+﻿Overview
+This project comprises two Python scripts:
+1. simulated_api.py: A simulated HTTP API that generates and serves fitness data.
+2. fitness_data_api.py: A client application that fetches fitness data from the simulated API and saves it to a CSV file for further analysis.
+The goal of the project is to simulate a real-world scenario where an API provides data, and a client application consumes and processes that data.
+________________
+
+
+Components
+1. Simulated API (simulated_api.py)
+* Purpose: Simulates a fitness data server that provides random data like step counts and heart rate values.
+* Key Features:
+   * Uses Python's http.server library to create a basic HTTP server.
+   * Handles GET requests to the /fitness-data endpoint.
+   * Generates fitness data with:
+      * timestamp: The current date and time in ISO format.
+      * steps: Random integer between 1000 and 15,000.
+      * heart_rate: Random integer between 60 and 120.
+   * Responds with the generated data in JSON format.
+* How it works:
+   * Starts a local HTTP server on localhost and port 8000.
+   * When accessed at /fitness-data, it sends a JSON response with random fitness data.
+2. Client Application (fitness_data_api.py)
+* Purpose: Fetches data from the simulated API and stores it in a CSV file for analysis.
+* Key Features:
+   * Connects to the simulated API at http://localhost:8000/fitness-data.
+   * Makes periodic GET requests (every 2 seconds for 10 iterations).
+   * Parses the JSON response from the API.
+   * Saves the data into a CSV file named fitness_data.csv.
+   * Includes headers (timestamp, steps, heart_rate) if the CSV file doesn't exist.
+   * Appends new data to the file if it already exists.
+________________
+
+
+Workflow
+1. Start the API Server:
+   * Run simulated_api.py to start the HTTP server on localhost:8000.
+   * The server will listen for GET requests at /fitness-data.
+2. Run the Client Application:
+   * Execute fitness_data_api.py to start fetching data from the API.
+   * The client will fetch data 10 times, pausing for 2 seconds between requests.
+   * Each data point will be appended to the fitness_data.csv file.
+3. Check the Output:
+   * The generated fitness data will be stored in the CSV file.
+Key Benefits
+* Learning Tool: Provides hands-on experience with:
+   * Setting up and using HTTP APIs.
+   * Working with JSON data in Python.
+   * Automating data storage into CSV files.
+* Extensibility:
+   * The API can be extended to include more fitness metrics.
+   * The client can be modified to include advanced data processing or visualization.
